@@ -1,0 +1,6 @@
+{
+  "name": "Harvard Extention Training College",
+  "description": "The official landing page for Harvard Extention Training College in Nakuru, Kenya, showcasing its 7 departments, practical course offerings, and professional student registration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
