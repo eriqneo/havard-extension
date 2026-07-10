@@ -221,62 +221,71 @@
   <!-- Skip to Content Link -->
   <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[#D4A017] text-white px-4 py-2.5 rounded-lg font-bold z-50 shadow-lg border border-[#B88A12] transition-all">Skip to main content</a>
 
-  <!-- 1. TOP UTILITY BAR -->
-  <div class="bg-brand-purpleDark text-gray-200 py-1.5 border-b border-purple-900/40 text-[11px] md:text-xs">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
-      <div class="flex items-center justify-center sm:justify-start gap-8 sm:gap-6 w-full sm:w-auto">
-        <a href="tel:0705355475" class="flex items-center gap-2 hover:text-brand-goldLight transition-colors min-h-[44px] sm:min-h-0" aria-label="Call Us">
-          <i data-lucide="phone" class="w-4 h-4 text-brand-gold"></i>
-          <span class="hidden sm:inline">0705 355 475</span>
-        </a>
-        <a href="mailto:harvardextentioncollege@gmail.com" class="flex items-center gap-2 hover:text-brand-goldLight transition-colors min-h-[44px] sm:min-h-0" aria-label="Email Us">
-          <i data-lucide="mail" class="w-4 h-4 text-brand-gold"></i>
-          <span class="hidden sm:inline">harvardextentioncollege@gmail.com</span>
-        </a>
-        <span class="hidden md:flex items-center gap-2 text-gray-300">
-          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-gold"></i>
-          <span>Nakuru, Kenya</span>
-        </span>
-      </div>
-      <div class="hidden sm:flex items-center gap-4">
-        <a href="#" class="hover:text-brand-gold transition-colors py-1 min-h-[44px] flex items-center justify-center" aria-label="Facebook"><i data-lucide="facebook" class="w-4 h-4"></i></a>
-        <a href="#" class="hover:text-brand-gold transition-colors py-1 min-h-[44px] flex items-center justify-center" aria-label="Instagram"><i data-lucide="instagram" class="w-4 h-4"></i></a>
-        <a href="#" class="hover:text-brand-gold transition-colors py-1 min-h-[44px] flex items-center justify-center" aria-label="Twitter"><i data-lucide="twitter" class="w-4 h-4"></i></a>
-        <a href="#" class="hover:text-brand-gold transition-colors py-1 min-h-[44px] flex items-center justify-center" aria-label="YouTube"><i data-lucide="youtube" class="w-4 h-4"></i></a>
+  <!-- HEADER WRAPPER (Sticky for both Utility Bar and Navbar) -->
+  <header class="sticky top-0 z-50 flex flex-col w-full shadow-sm">
+    <!-- 1. TOP UTILITY BAR -->
+    <div class="bg-brand-purpleDark text-gray-200 py-1.5 border-b border-purple-900/40 text-[11px] md:text-xs">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
+        
+        <!-- Contact Info -->
+        <div class="flex items-center gap-4 sm:gap-6">
+          <a href="tel:0705355475" class="flex items-center gap-1.5 hover:text-brand-goldLight transition-colors min-h-[36px] sm:min-h-0" aria-label="Call Us">
+            <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-gold"></i>
+            <span>0705 355 475</span>
+          </a>
+          <a href="mailto:harvardextentioncollege@gmail.com" class="hidden sm:flex items-center gap-1.5 hover:text-brand-goldLight transition-colors min-h-[36px] sm:min-h-0" aria-label="Email Us">
+            <i data-lucide="mail" class="w-3.5 h-3.5 text-brand-gold"></i>
+            <span>harvardextentioncollege@gmail.com</span>
+          </a>
+        </div>
+        
+        <!-- Social Icons (Visible on Mobile & Desktop) -->
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:text-brand-gold transition-colors flex items-center justify-center min-h-[36px] sm:min-h-0" aria-label="TikTok">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 448 512"><path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.17h0A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14Z"/></svg>
+          </a>
+          <a href="#" class="hover:text-brand-gold transition-colors flex items-center justify-center min-h-[36px] sm:min-h-0" aria-label="Facebook">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="#" class="hover:text-brand-gold transition-colors flex items-center justify-center min-h-[36px] sm:min-h-0" aria-label="Instagram">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- 2. STICKY NAVBAR -->
-  <nav id="sticky-navbar" class="sticky top-0 z-40 bg-transparent border-b border-transparent transition-all duration-300 backdrop-blur-none">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
-      <!-- Logo Wordmark -->
-      <a href="#home" class="flex items-center gap-3 group">
-        <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-[4px] border-brand-gold shadow-[0_4px_20px_rgba(212,160,23,0.4)] transform group-hover:scale-105 transition-transform duration-300 bg-white flex items-center justify-center shrink-0 -my-2 relative z-10">
-          <img src="/assets/havard.jpeg" alt="Harvard Extention Logo" class="w-full h-full object-cover">
-        </div>
-        <div class="flex flex-col justify-center">
-          <div class="font-poppins font-extrabold text-sm md:text-base tracking-wide text-brand-purple uppercase leading-none transition-colors group-hover:text-brand-purpleDark">Harvard Extention</div>
-          <div class="font-poppins font-semibold text-[10px] md:text-xs tracking-[0.18em] text-brand-gold uppercase mt-1.5 leading-none">Training College</div>
-        </div>
-      </a>
+    <!-- 2. NAVBAR -->
+    <nav id="sticky-navbar" class="bg-transparent border-b border-transparent transition-all duration-300 backdrop-blur-none">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+        <!-- Logo Wordmark -->
+        <a href="#home" class="flex items-center gap-3 group">
+          <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-[4px] border-brand-gold shadow-[0_4px_20px_rgba(212,160,23,0.4)] transform group-hover:scale-105 transition-transform duration-300 bg-white flex items-center justify-center shrink-0 -my-2 relative z-10">
+            <img src="/assets/havard.jpeg" alt="Harvard Extention Logo" class="w-full h-full object-cover">
+          </div>
+          <div class="flex flex-col justify-center">
+            <div class="font-poppins font-extrabold text-sm md:text-base tracking-wide text-brand-purple uppercase leading-none transition-colors group-hover:text-brand-purpleDark">Harvard Extention</div>
+            <div class="font-poppins font-semibold text-[10px] md:text-xs tracking-[0.18em] text-brand-gold uppercase mt-1.5 leading-none">Training College</div>
+          </div>
+        </a>
 
-      <!-- Desktop Links -->
-      <div class="hidden lg:flex items-center gap-8 font-medium text-sm text-brand-purpleDark">
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#about" class="nav-link">About Us</a>
-        <a href="#departments" class="nav-link">Departments</a>
-        <a href="#why-us" class="nav-link">Why Us</a>
-        <a href="#contact" class="nav-link">Contact</a>
-        <a href="#register" class="bg-[#D4A017] hover:bg-[#B88A12] text-white px-6 py-2.5 rounded-full font-bold shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">Apply Now</a>
+        <!-- Desktop Links -->
+        <div class="hidden lg:flex items-center gap-8 font-medium text-sm text-brand-purpleDark">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About Us</a>
+          <a href="#departments" class="nav-link">Departments</a>
+          <a href="#why-us" class="nav-link">Why Us</a>
+          <a href="#gallery" class="nav-link">Gallery</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="#register" class="bg-[#D4A017] hover:bg-[#B88A12] text-white px-6 py-2.5 rounded-full font-bold shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">Apply Now</a>
+        </div>
+
+        <!-- Hamburger Button -->
+        <button id="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-drawer" class="lg:hidden p-3 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg text-brand-purple hover:bg-gray-100 transition-colors" aria-label="Open Menu">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
       </div>
-
-      <!-- Hamburger Button -->
-      <button id="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-drawer" class="lg:hidden p-3 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg text-brand-purple hover:bg-gray-100 transition-colors" aria-label="Open Menu">
-        <i data-lucide="menu" class="w-6 h-6"></i>
-      </button>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
   <!-- Mobile Menu Drawer Backdrop -->
   <div id="mobile-overlay" class="fixed inset-0 bg-black/60 z-40 hidden opacity-0 transition-opacity duration-300"></div>
@@ -303,6 +312,7 @@
         <a href="#about" class="drawer-link flex items-center gap-3 hover:text-brand-gold transition-colors py-3 px-4 rounded-xl hover:bg-brand-lavender/50"><i data-lucide="info" class="w-5 h-5 text-brand-gold"></i>About Us</a>
         <a href="#departments" class="drawer-link flex items-center gap-3 hover:text-brand-gold transition-colors py-3 px-4 rounded-xl hover:bg-brand-lavender/50"><i data-lucide="grid" class="w-5 h-5 text-brand-gold"></i>Departments</a>
         <a href="#why-us" class="drawer-link flex items-center gap-3 hover:text-brand-gold transition-colors py-3 px-4 rounded-xl hover:bg-brand-lavender/50"><i data-lucide="shield-check" class="w-5 h-5 text-brand-gold"></i>Why Us</a>
+        <a href="#gallery" class="drawer-link flex items-center gap-3 hover:text-brand-gold transition-colors py-3 px-4 rounded-xl hover:bg-brand-lavender/50"><i data-lucide="image" class="w-5 h-5 text-brand-gold"></i>Gallery</a>
         <a href="#contact" class="drawer-link flex items-center gap-3 hover:text-brand-gold transition-colors py-3 px-4 rounded-xl hover:bg-brand-lavender/50"><i data-lucide="phone-call" class="w-5 h-5 text-brand-gold"></i>Contact</a>
       </div>
     </div>
@@ -515,399 +525,411 @@
         <p class="text-gray-600 text-sm md:text-base">Explore our professional training packages designed for modern markets. Tap a department tab below to view our course listings.</p>
       </div>
 
-      <!-- 7 Departments Tab Row (Scrollable on mobile with snap-points) -->
-      <div class="w-full overflow-x-auto scrollbar-none snap-x snap-mandatory flex gap-3 pb-6 mb-10 border-b border-purple-100/40 -mx-4 px-4 sm:mx-0 sm:px-0">
-        <!-- Tab 1: Health & Social Sciences (Active by default) -->
-        <button onclick="switchTab('health')" id="tab-health" aria-expanded="true" aria-controls="panel-health" class="snap-start shrink-0 px-5 py-3.5 rounded-full font-poppins font-bold text-xs md:text-sm border transition-all duration-300 flex items-center gap-2 bg-[#1E7A3C] text-white border-[#1E7A3C] shadow-md outline-none min-h-[44px]">
-          <i data-lucide="activity" class="w-4 h-4"></i>
-          <span>Health & Social Sciences</span>
-        </button>
-
-        <!-- Tab 2: Business -->
-        <button onclick="switchTab('business')" id="tab-business" aria-expanded="false" aria-controls="panel-business" class="snap-start shrink-0 px-5 py-3.5 rounded-full font-poppins font-bold text-xs md:text-sm border transition-all duration-300 flex items-center gap-2 border-[#1D4ED8] text-[#1D4ED8] bg-transparent hover:bg-[#1D4ED8]/5 outline-none min-h-[44px]">
-          <i data-lucide="briefcase" class="w-4 h-4"></i>
-          <span>Business Studies</span>
-        </button>
-
-        <!-- Tab 3: Engineering & ICT -->
-        <button onclick="switchTab('engineering')" id="tab-engineering" aria-expanded="false" aria-controls="panel-engineering" class="snap-start shrink-0 px-5 py-3.5 rounded-full font-poppins font-bold text-xs md:text-sm border transition-all duration-300 flex items-center gap-2 border-[#E8720C] text-[#E8720C] bg-transparent hover:bg-[#E8720C]/5 outline-none min-h-[44px]">
-          <i data-lucide="cpu" class="w-4 h-4"></i>
-          <span>Engineering & ICT</span>
-        </button>
-
-        <!-- Tab 4: Hospitality & Tourism -->
-        <button onclick="switchTab('hospitality')" id="tab-hospitality" aria-expanded="false" aria-controls="panel-hospitality" class="snap-start shrink-0 px-5 py-3.5 rounded-full font-poppins font-bold text-xs md:text-sm border transition-all duration-300 flex items-center gap-2 border-[#C81E3A] text-[#C81E3A] bg-transparent hover:bg-[#C81E3A]/5 outline-none min-h-[44px]">
-          <i data-lucide="utensils" class="w-4 h-4"></i>
-          <span>Hospitality & Tourism</span>
-        </button>
-
-        <!-- Tab 5: Cosmetology -->
-        <button onclick="switchTab('cosmetology')" id="tab-cosmetology" aria-expanded="false" aria-controls="panel-cosmetology" class="snap-start shrink-0 px-5 py-3.5 rounded-full font-poppins font-bold text-xs md:text-sm border transition-all duration-300 flex items-center gap-2 border-[#0E7C86] text-[#0E7C86] bg-transparent hover:bg-[#0E7C86]/5 outline-none min-h-[44px]">
-          <i data-lucide="sparkles" class="w-4 h-4"></i>
-          <span>Cosmetology</span>
-        </button>
-
-        <!-- Tab 6: Foreign Languages -->
-        <button onclick="switchTab('languages')" id="tab-languages" aria-expanded="false" aria-controls="panel-languages" class="snap-start shrink-0 px-5 py-3.5 rounded-full font-poppins font-bold text-xs md:text-sm border transition-all duration-300 flex items-center gap-2 border-[#4338CA] text-[#4338CA] bg-transparent hover:bg-[#4338CA]/5 outline-none min-h-[44px]">
-          <i data-lucide="languages" class="w-4 h-4"></i>
-          <span>Foreign Languages</span>
-        </button>
-
-        <!-- Tab 7: Fashion & Design -->
-        <button onclick="switchTab('fashion')" id="tab-fashion" aria-expanded="false" aria-controls="panel-fashion" class="snap-start shrink-0 px-5 py-3.5 rounded-full font-poppins font-bold text-xs md:text-sm border transition-all duration-300 flex items-center gap-2 border-[#D6247A] text-[#D6247A] bg-transparent hover:bg-[#D6247A]/5 outline-none min-h-[44px]">
-          <i data-lucide="scissors" class="w-4 h-4"></i>
-          <span>Fashion & Design</span>
-        </button>
-      </div>
-
-      <!-- Tab Content Panels -->
-      <div id="departments-panels-container" class="relative">
-
-        <!-- PANEL 1: HEALTH & SOCIAL SCIENCES (Active by default) -->
-        <div id="panel-health" class="bg-white p-6 md:p-10 rounded-3xl shadow-xl border border-purple-100/60 flex flex-col gap-6 md:gap-8 transition-all duration-300">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-purple-100/30 pb-6">
-            <div class="flex items-center gap-4">
-              <span class="w-14 h-14 rounded-2xl bg-emerald-50 text-[#1E7A3C] flex items-center justify-center shadow-inner"><i data-lucide="activity" class="w-7 h-7"></i></span>
-              <div>
-                <h3 class="text-xl md:text-2xl font-poppins font-extrabold text-brand-purpleDark">Health & Social Sciences</h3>
-                <p class="text-xs text-gray-500 font-semibold mt-1">11 Practical Programs • Hands-on Training</p>
-              </div>
+      <!-- Departments Grid (4 Columns, 2 Rows on Desktop) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12 reveal">
+        
+        <!-- Card 1: Health & Social Sciences -->
+        <div class="h-[500px] rounded-3xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl bg-gradient-to-br from-[#1E7A3C] via-[#17622f] to-[#0e3b1c] text-white border border-[#1E7A3C]/40 shadow-xl group">
+          <!-- Card Header -->
+          <div>
+            <div class="flex justify-between items-center mb-4">
+              <span class="w-10 h-10 rounded-xl bg-white/10 text-white flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform duration-300"><i data-lucide="activity" class="w-5 h-5"></i></span>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider bg-white/10 px-2.5 py-1 rounded-full text-white">11 Courses</span>
             </div>
-            <!-- Enquire Button -->
-            <button onclick="enquireDept('Health & Social Sciences')" class="inline-flex items-center gap-2 bg-[#D4A017] hover:bg-[#B88A12] text-white font-bold px-5 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all text-xs uppercase tracking-wider self-start sm:self-center min-h-[44px]">
-              <i data-lucide="help-circle" class="w-4 h-4"></i>
-              <span>Enquire about this department</span>
-            </button>
+            <h3 class="font-poppins font-extrabold text-lg leading-tight mb-2">Health & Social Sciences</h3>
+            <div class="h-px bg-white/20 my-3"></div>
+          </div>
+          
+          <!-- Scrollable Course List -->
+          <div class="flex-1 overflow-y-auto pr-1 select-none text-[12px] space-y-2.5 my-3 [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-thumb]:bg-white/20 [&::-webkit-scrollbar-thumb]:rounded-full">
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-350 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Perioperative Theatre Technology</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-350 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Certified Nurse Assistant (CNA)</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-350 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Health Records & IT</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-350 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Community Health Nursing</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-350 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Nutrition and Dietetics</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-350 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">HIV Training Services (HTS)</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-350 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Social Work & Community Dev.</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-350 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Counselling Psychology</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-350 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Criminology & Legal Studies</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-350 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Science Laboratory Tech.</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-350 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Emergency Training</span>
+            </div>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-emerald-50 text-[#1E7A3C] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Perioperative Theatre Technology</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-emerald-50 text-[#1E7A3C] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Certified Nurse Assistant (CNA)</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-emerald-50 text-[#1E7A3C] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Health Records & IT</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-emerald-50 text-[#1E7A3C] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Community Health Nursing</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-emerald-50 text-[#1E7A3C] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Nutrition and Dietetics</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-emerald-50 text-[#1E7A3C] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">HIV Training Services (HTS)</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-emerald-50 text-[#1E7A3C] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Social Work & Community Development</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-emerald-50 text-[#1E7A3C] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Counselling Psychology</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-emerald-50 text-[#1E7A3C] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Criminology & Legal Studies</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-emerald-50 text-[#1E7A3C] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Science Laboratory Technology</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-emerald-50 text-[#1E7A3C] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Emergency Training</span>
-            </div>
-          </div>
+          <!-- Card Button -->
+          <button onclick="enquireDept('Health & Social Sciences')" class="w-full py-3 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl border border-white/20 text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-1.5 min-h-[44px]">
+            <span>Enquire Course</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+          </button>
         </div>
 
-        <!-- PANEL 2: BUSINESS STUDIES (Hidden by default) -->
-        <div id="panel-business" class="hidden opacity-0 translate-y-4 bg-white p-6 md:p-10 rounded-3xl shadow-xl border border-purple-100/60 flex flex-col gap-6 md:gap-8 transition-all duration-300">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-purple-100/30 pb-6">
-            <div class="flex items-center gap-4">
-              <span class="w-14 h-14 rounded-2xl bg-blue-50 text-[#1D4ED8] flex items-center justify-center shadow-inner"><i data-lucide="briefcase" class="w-7 h-7"></i></span>
-              <div>
-                <h3 class="text-xl md:text-2xl font-poppins font-extrabold text-brand-purpleDark">Business Studies</h3>
-                <p class="text-xs text-gray-500 font-semibold mt-1">9 Professional Programs • Career Centered</p>
-              </div>
+        <!-- Card 2: Business Studies -->
+        <div class="h-[500px] rounded-3xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl bg-gradient-to-br from-[#1D4ED8] via-[#163fae] to-[#0d276b] text-white border border-[#1D4ED8]/40 shadow-xl group">
+          <!-- Card Header -->
+          <div>
+            <div class="flex justify-between items-center mb-4">
+              <span class="w-10 h-10 rounded-xl bg-white/10 text-white flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform duration-300"><i data-lucide="briefcase" class="w-5 h-5"></i></span>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider bg-white/10 px-2.5 py-1 rounded-full text-white">9 Courses</span>
             </div>
-            <!-- Enquire Button -->
-            <button onclick="enquireDept('Business')" class="inline-flex items-center gap-2 bg-[#D4A017] hover:bg-[#B88A12] text-white font-bold px-5 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all text-xs uppercase tracking-wider self-start sm:self-center min-h-[44px]">
-              <i data-lucide="help-circle" class="w-4 h-4"></i>
-              <span>Enquire about this department</span>
-            </button>
+            <h3 class="font-poppins font-extrabold text-lg leading-tight mb-2">Business Studies</h3>
+            <div class="h-px bg-white/20 my-3"></div>
+          </div>
+          
+          <!-- Scrollable Course List -->
+          <div class="flex-1 overflow-y-auto pr-1 select-none text-[12px] space-y-2.5 my-3 [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-thumb]:bg-white/20 [&::-webkit-scrollbar-thumb]:rounded-full">
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-300 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Human Resource Management</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-300 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Accountancy</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-300 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Banking and Finance</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-300 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Sales and Marketing</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-300 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Secretarial Studies</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-300 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Project Management</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-300 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Certified Public Accountancy (CPA)</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-300 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Public Administration</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-300 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Store Keeping</span>
+            </div>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-blue-50 text-[#1D4ED8] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Human Resource Management</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-blue-50 text-[#1D4ED8] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Accountancy</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-blue-50 text-[#1D4ED8] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Banking and Finance</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-blue-50 text-[#1D4ED8] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Sales and Marketing</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-blue-50 text-[#1D4ED8] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Secretarial Studies</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-blue-50 text-[#1D4ED8] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Project Management</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-blue-50 text-[#1D4ED8] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Certified Public Accountancy (CPA)</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-blue-50 text-[#1D4ED8] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Public Administration</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-blue-50 text-[#1D4ED8] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Store Keeping</span>
-            </div>
-          </div>
+          <!-- Card Button -->
+          <button onclick="enquireDept('Business')" class="w-full py-3 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl border border-white/20 text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-1.5 min-h-[44px]">
+            <span>Enquire Course</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+          </button>
         </div>
 
-        <!-- PANEL 3: ENGINEERING & ICT (Hidden by default) -->
-        <div id="panel-engineering" class="hidden opacity-0 translate-y-4 bg-white p-6 md:p-10 rounded-3xl shadow-xl border border-purple-100/60 flex flex-col gap-6 md:gap-8 transition-all duration-300">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-purple-100/30 pb-6">
-            <div class="flex items-center gap-4">
-              <span class="w-14 h-14 rounded-2xl bg-orange-50 text-[#E8720C] flex items-center justify-center shadow-inner"><i data-lucide="cpu" class="w-7 h-7"></i></span>
-              <div>
-                <h3 class="text-xl md:text-2xl font-poppins font-extrabold text-brand-purpleDark">Engineering & ICT</h3>
-                <p class="text-xs text-gray-500 font-semibold mt-1">12 Technical Programs • 100% Practical</p>
-              </div>
+        <!-- Card 3: Engineering & ICT -->
+        <div class="h-[500px] rounded-3xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl bg-gradient-to-br from-[#E8720C] via-[#be5d0a] to-[#7d3d06] text-white border border-[#E8720C]/40 shadow-xl group">
+          <!-- Card Header -->
+          <div>
+            <div class="flex justify-between items-center mb-4">
+              <span class="w-10 h-10 rounded-xl bg-white/10 text-white flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform duration-300"><i data-lucide="cpu" class="w-5 h-5"></i></span>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider bg-white/10 px-2.5 py-1 rounded-full text-white">12 Courses</span>
             </div>
-            <!-- Enquire Button -->
-            <button onclick="enquireDept('Engineering & ICT')" class="inline-flex items-center gap-2 bg-[#D4A017] hover:bg-[#B88A12] text-white font-bold px-5 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all text-xs uppercase tracking-wider self-start sm:self-center min-h-[44px]">
-              <i data-lucide="help-circle" class="w-4 h-4"></i>
-              <span>Enquire about this department</span>
-            </button>
+            <h3 class="font-poppins font-extrabold text-lg leading-tight mb-2">Engineering & ICT</h3>
+            <div class="h-px bg-white/20 my-3"></div>
+          </div>
+          
+          <!-- Scrollable Course List -->
+          <div class="flex-1 overflow-y-auto pr-1 select-none text-[12px] space-y-2.5 my-3 [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-thumb]:bg-white/20 [&::-webkit-scrollbar-thumb]:rounded-full">
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-orange-350 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Electrical & Electronic Eng.</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-orange-350 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Automotive Engineering</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-orange-350 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Plumbing</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-orange-350 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">General Agriculture</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-orange-350 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Information Communication (ICT)</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-orange-350 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Computer Science</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-orange-350 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Software Engineering</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-orange-350 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Programming and AI</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-orange-350 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Advanced Computer Packages</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-orange-350 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Building Technology</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-orange-350 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Journalism & Mass Comm.</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-orange-350 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Music & Deejaying</span>
+            </div>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-orange-50 text-[#E8720C] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Electrical & Electronic Engineering</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-orange-50 text-[#E8720C] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Automotive Engineering</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-orange-50 text-[#E8720C] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Plumbing</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-orange-50 text-[#E8720C] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">General Agriculture</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-orange-50 text-[#E8720C] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Information Communication Technology (ICT)</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-orange-50 text-[#E8720C] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Computer Science</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-orange-50 text-[#E8720C] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Software Engineering</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-orange-50 text-[#E8720C] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Programming and AI</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-orange-50 text-[#E8720C] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Advanced Computer Packages</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-orange-50 text-[#E8720C] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Building Technology</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-orange-50 text-[#E8720C] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Journalism & Mass Communication</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-orange-50 text-[#E8720C] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Music & Deejaying</span>
-            </div>
-          </div>
+          <!-- Card Button -->
+          <button onclick="enquireDept('Engineering & ICT')" class="w-full py-3 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl border border-white/20 text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-1.5 min-h-[44px]">
+            <span>Enquire Course</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+          </button>
         </div>
 
-        <!-- PANEL 4: HOSPITALITY & TOURISM (Hidden by default) -->
-        <div id="panel-hospitality" class="hidden opacity-0 translate-y-4 bg-white p-6 md:p-10 rounded-3xl shadow-xl border border-purple-100/60 flex flex-col gap-6 md:gap-8 transition-all duration-300">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-purple-100/30 pb-6">
-            <div class="flex items-center gap-4">
-              <span class="w-14 h-14 rounded-2xl bg-rose-50 text-[#C81E3A] flex items-center justify-center shadow-inner"><i data-lucide="utensils" class="w-7 h-7"></i></span>
-              <div>
-                <h3 class="text-xl md:text-2xl font-poppins font-extrabold text-brand-purpleDark">Hospitality & Tourism</h3>
-                <p class="text-xs text-gray-500 font-semibold mt-1">5 Practical Programs • Industry Oriented</p>
-              </div>
+        <!-- Card 4: Hospitality & Tourism -->
+        <div class="h-[500px] rounded-3xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl bg-gradient-to-br from-[#C81E3A] via-[#a3172e] to-[#6c0f1e] text-white border border-[#C81E3A]/40 shadow-xl group">
+          <!-- Card Header -->
+          <div>
+            <div class="flex justify-between items-center mb-4">
+              <span class="w-10 h-10 rounded-xl bg-white/10 text-white flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform duration-300"><i data-lucide="utensils" class="w-5 h-5"></i></span>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider bg-white/10 px-2.5 py-1 rounded-full text-white">5 Courses</span>
             </div>
-            <!-- Enquire Button -->
-            <button onclick="enquireDept('Hospitality')" class="inline-flex items-center gap-2 bg-[#D4A017] hover:bg-[#B88A12] text-white font-bold px-5 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all text-xs uppercase tracking-wider self-start sm:self-center min-h-[44px]">
-              <i data-lucide="help-circle" class="w-4 h-4"></i>
-              <span>Enquire about this department</span>
-            </button>
+            <h3 class="font-poppins font-extrabold text-lg leading-tight mb-2">Hospitality & Tourism</h3>
+            <div class="h-px bg-white/20 my-3"></div>
+          </div>
+          
+          <!-- Scrollable Course List -->
+          <div class="flex-1 overflow-y-auto pr-1 select-none text-[12px] space-y-2.5 my-3 [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-thumb]:bg-white/20 [&::-webkit-scrollbar-thumb]:rounded-full">
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-red-300 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Food and Beverage</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-red-300 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Catering and Accommodation</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-red-300 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Hospitality Management</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-red-300 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Tour and Travels</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-red-300 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Flight Attendant</span>
+            </div>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-rose-50 text-[#C81E3A] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Food and Beverage</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-rose-50 text-[#C81E3A] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Catering and Accommodation</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-rose-50 text-[#C81E3A] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Hospitality Management</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-rose-50 text-[#C81E3A] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Tour and Travels</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-rose-50 text-[#C81E3A] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Flight Attendant</span>
-            </div>
-          </div>
+          <!-- Card Button -->
+          <button onclick="enquireDept('Hospitality')" class="w-full py-3 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl border border-white/20 text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-1.5 min-h-[44px]">
+            <span>Enquire Course</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+          </button>
         </div>
 
-        <!-- PANEL 5: COSMETOLOGY (Hidden by default) -->
-        <div id="panel-cosmetology" class="hidden opacity-0 translate-y-4 bg-white p-6 md:p-10 rounded-3xl shadow-xl border border-purple-100/60 flex flex-col gap-6 md:gap-8 transition-all duration-300">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-purple-100/30 pb-6">
-            <div class="flex items-center gap-4">
-              <span class="w-14 h-14 rounded-2xl bg-teal-50 text-[#0E7C86] flex items-center justify-center shadow-inner"><i data-lucide="sparkles" class="w-7 h-7"></i></span>
-              <div>
-                <h3 class="text-xl md:text-2xl font-poppins font-extrabold text-brand-purpleDark">Cosmetology</h3>
-                <p class="text-xs text-gray-500 font-semibold mt-1">5 Skilled Programs • Hands-on Practice</p>
-              </div>
+        <!-- Card 5: Cosmetology -->
+        <div class="h-[500px] rounded-3xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl bg-gradient-to-br from-[#0E7C86] via-[#0b646c] to-[#074147] text-white border border-[#0E7C86]/40 shadow-xl group">
+          <!-- Card Header -->
+          <div>
+            <div class="flex justify-between items-center mb-4">
+              <span class="w-10 h-10 rounded-xl bg-white/10 text-white flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform duration-300"><i data-lucide="sparkles" class="w-5 h-5"></i></span>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider bg-white/10 px-2.5 py-1 rounded-full text-white">5 Courses</span>
             </div>
-            <!-- Enquire Button -->
-            <button onclick="enquireDept('Cosmetology')" class="inline-flex items-center gap-2 bg-[#D4A017] hover:bg-[#B88A12] text-white font-bold px-5 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all text-xs uppercase tracking-wider self-start sm:self-center min-h-[44px]">
-              <i data-lucide="help-circle" class="w-4 h-4"></i>
-              <span>Enquire about this department</span>
-            </button>
+            <h3 class="font-poppins font-extrabold text-lg leading-tight mb-2">Cosmetology</h3>
+            <div class="h-px bg-white/20 my-3"></div>
+          </div>
+          
+          <!-- Scrollable Course List -->
+          <div class="flex-1 overflow-y-auto pr-1 select-none text-[12px] space-y-2.5 my-3 [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-thumb]:bg-white/20 [&::-webkit-scrollbar-thumb]:rounded-full">
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-300 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Hair Dressing</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-300 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Beauty Therapy</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-300 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Skin Care</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-300 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Shaving</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-300 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Massage Training</span>
+            </div>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-teal-50 text-[#0E7C86] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Hair Dressing</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-teal-50 text-[#0E7C86] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Beauty Therapy</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-teal-50 text-[#0E7C86] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Skin Care</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-teal-50 text-[#0E7C86] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Shaving</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-teal-50 text-[#0E7C86] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Massage Training</span>
-            </div>
-          </div>
+          <!-- Card Button -->
+          <button onclick="enquireDept('Cosmetology')" class="w-full py-3 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl border border-white/20 text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-1.5 min-h-[44px]">
+            <span>Enquire Course</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+          </button>
         </div>
 
-        <!-- PANEL 6: FOREIGN LANGUAGES (Hidden by default) -->
-        <div id="panel-languages" class="hidden opacity-0 translate-y-4 bg-white p-6 md:p-10 rounded-3xl shadow-xl border border-purple-100/60 flex flex-col gap-6 md:gap-8 transition-all duration-300">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-purple-100/30 pb-6">
-            <div class="flex items-center gap-4">
-              <span class="w-14 h-14 rounded-2xl bg-indigo-50 text-[#4338CA] flex items-center justify-center shadow-inner"><i data-lucide="languages" class="w-7 h-7"></i></span>
-              <div>
-                <h3 class="text-xl md:text-2xl font-poppins font-extrabold text-brand-purpleDark">Foreign Languages</h3>
-                <p class="text-xs text-gray-500 font-semibold mt-1">5 Language Programs • Global Opportunities</p>
-              </div>
+        <!-- Card 6: Foreign Languages -->
+        <div class="h-[500px] rounded-3xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl bg-gradient-to-br from-[#4338CA] via-[#352ca4] to-[#211b68] text-white border border-[#4338CA]/40 shadow-xl group">
+          <!-- Card Header -->
+          <div>
+            <div class="flex justify-between items-center mb-4">
+              <span class="w-10 h-10 rounded-xl bg-white/10 text-white flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform duration-300"><i data-lucide="languages" class="w-5 h-5"></i></span>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider bg-white/10 px-2.5 py-1 rounded-full text-white">5 Courses</span>
             </div>
-            <!-- Enquire Button -->
-            <button onclick="enquireDept('Foreign Languages')" class="inline-flex items-center gap-2 bg-[#D4A017] hover:bg-[#B88A12] text-white font-bold px-5 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all text-xs uppercase tracking-wider self-start sm:self-center min-h-[44px]">
-              <i data-lucide="help-circle" class="w-4 h-4"></i>
-              <span>Enquire about this department</span>
-            </button>
+            <h3 class="font-poppins font-extrabold text-lg leading-tight mb-2">Foreign Languages</h3>
+            <div class="h-px bg-white/20 my-3"></div>
+          </div>
+          
+          <!-- Scrollable Course List -->
+          <div class="flex-1 overflow-y-auto pr-1 select-none text-[12px] space-y-2.5 my-3 [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-thumb]:bg-white/20 [&::-webkit-scrollbar-thumb]:rounded-full">
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-300 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">French Language</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-300 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">German Language</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-300 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Chinese Language</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-300 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">English Language</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-300 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Kiswahili Language</span>
+            </div>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-indigo-50 text-[#4338CA] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">French</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-indigo-50 text-[#4338CA] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">German</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-indigo-50 text-[#4338CA] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Chinese</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-indigo-50 text-[#4338CA] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">English</span>
-            </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-indigo-50 text-[#4338CA] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Kiswahili</span>
-            </div>
-          </div>
+          <!-- Card Button -->
+          <button onclick="enquireDept('Foreign Languages')" class="w-full py-3 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl border border-white/20 text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-1.5 min-h-[44px]">
+            <span>Enquire Course</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+          </button>
         </div>
 
-        <!-- PANEL 7: FASHION & DESIGN (Hidden by default) -->
-        <div id="panel-fashion" class="hidden opacity-0 translate-y-4 bg-white p-6 md:p-10 rounded-3xl shadow-xl border border-purple-100/60 flex flex-col gap-6 md:gap-8 transition-all duration-300">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-purple-100/30 pb-6">
-            <div class="flex items-center gap-4">
-              <span class="w-14 h-14 rounded-2xl bg-pink-50 text-[#D6247A] flex items-center justify-center shadow-inner"><i data-lucide="scissors" class="w-7 h-7"></i></span>
-              <div>
-                <h3 class="text-xl md:text-2xl font-poppins font-extrabold text-brand-purpleDark">Fashion & Design</h3>
-                <p class="text-xs text-gray-500 font-semibold mt-1">3 Specialty Programs • Creative & Practical</p>
-              </div>
+        <!-- Card 7: Fashion & Design -->
+        <div class="h-[500px] rounded-3xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl bg-gradient-to-br from-[#D6247A] via-[#b01d63] to-[#721240] text-white border border-[#D6247A]/40 shadow-xl group">
+          <!-- Card Header -->
+          <div>
+            <div class="flex justify-between items-center mb-4">
+              <span class="w-10 h-10 rounded-xl bg-white/10 text-white flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform duration-300"><i data-lucide="scissors" class="w-5 h-5"></i></span>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider bg-white/10 px-2.5 py-1 rounded-full text-white">3 Courses</span>
             </div>
-            <!-- Enquire Button -->
-            <button onclick="enquireDept('Fashion & Design')" class="inline-flex items-center gap-2 bg-[#D4A017] hover:bg-[#B88A12] text-white font-bold px-5 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all text-xs uppercase tracking-wider self-start sm:self-center min-h-[44px]">
-              <i data-lucide="help-circle" class="w-4 h-4"></i>
-              <span>Enquire about this department</span>
-            </button>
+            <h3 class="font-poppins font-extrabold text-lg leading-tight mb-2">Fashion & Design</h3>
+            <div class="h-px bg-white/20 my-3"></div>
+          </div>
+          
+          <!-- Scrollable Course List -->
+          <div class="flex-1 overflow-y-auto pr-1 select-none text-[12px] space-y-2.5 my-3 [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-thumb]:bg-white/20 [&::-webkit-scrollbar-thumb]:rounded-full">
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-pink-300 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Suits Tailoring</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-pink-300 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">African Wear Custom Design</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-pink-300 shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Kids Wear</span>
+            </div>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-pink-50 text-[#D6247A] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Suits Tailoring</span>
+          <!-- Card Button -->
+          <button onclick="enquireDept('Fashion & Design')" class="w-full py-3 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl border border-white/20 text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-1.5 min-h-[44px]">
+            <span>Enquire Course</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- Card 8: Career Advice & Admissions -->
+        <div class="h-[500px] rounded-3xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl bg-gradient-to-br from-[#3B0A6B] via-[#2d0752] to-[#1a0430] text-white border-2 border-brand-gold/60 shadow-xl group">
+          <!-- Card Header -->
+          <div>
+            <div class="flex justify-between items-center mb-4">
+              <span class="w-10 h-10 rounded-xl bg-white/10 text-white flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform duration-300"><i data-lucide="help-circle" class="w-5 h-5"></i></span>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider bg-white/10 px-2.5 py-1 rounded-full text-white">Support</span>
             </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-pink-50 text-[#D6247A] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">African Wear Custom Design</span>
+            <h3 class="font-poppins font-extrabold text-lg leading-tight mb-2">Careers & Admissions</h3>
+            <div class="h-px bg-white/20 my-3"></div>
+          </div>
+          
+          <!-- Scrollable Course List -->
+          <div class="flex-1 overflow-y-auto pr-1 select-none text-[12px] space-y-2.5 my-3 [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-thumb]:bg-white/20 [&::-webkit-scrollbar-thumb]:rounded-full">
+            <div class="flex items-start gap-2">
+              <i data-lucide="star" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Guided Career Assessments</span>
             </div>
-            <div class="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-gray-50/80 transition-all duration-200">
-              <div class="w-6 h-6 rounded-full bg-pink-50 text-[#D6247A] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><i data-lucide="check" class="w-4 h-4"></i></div>
-              <span class="text-sm font-semibold text-gray-700">Kids Wear</span>
+            <div class="flex items-start gap-2">
+              <i data-lucide="star" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Flexible Scheduling (Full/Part/Eve)</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="star" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Personal Registrar Support</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="star" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Physical Campus Guided Tour</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="star" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+              <span class="font-medium text-gray-100">Direct Enrollment Processing</span>
             </div>
           </div>
+
+          <!-- Card Button -->
+          <button onclick="enquireDept('General')" class="w-full py-3 bg-brand-gold hover:bg-brand-goldLight text-brand-purpleDark font-bold rounded-xl text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-1.5 min-h-[44px]">
+            <span>Chat Admissions</span>
+            <i data-lucide="message-square" class="w-4 h-4"></i>
+          </button>
         </div>
 
       </div>
@@ -961,7 +983,79 @@
     </div>
   </section>
 
-  <!-- 8. TESTIMONIALS SECTION -->
+  <!-- GALLERY SECTION -->
+  <section id="gallery" class="py-20 md:py-28 bg-brand-purpleDark text-white relative overflow-hidden">
+    <!-- Background Decor -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none -translate-y-1/2 translate-x-1/3"></div>
+    <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-purple/40 rounded-full blur-3xl pointer-events-none translate-y-1/3 -translate-x-1/4"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+      <div class="text-center max-w-2xl mx-auto mb-12 md:mb-16 reveal">
+        <span class="text-brand-gold font-poppins font-extrabold tracking-widest text-xs uppercase block mb-2">CAMPUS GALLERY</span>
+        <div class="w-12 h-0.5 bg-brand-gold mx-auto mb-4 rounded-full"></div>
+        <h2 class="text-3xl md:text-4xl font-poppins font-extrabold text-white leading-tight mb-4">Experience Life at Harvard Extention</h2>
+        <p class="text-gray-300 text-sm md:text-base">Take a visual tour of our modern facilities, hands-on practical sessions, and vibrant student community.</p>
+      </div>
+
+      <!-- Horizontal Snapping Carousel -->
+      <div id="gallery-carousel" class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-4 reveal [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] scroll-smooth">
+        
+        <!-- Image 1 -->
+        <div class="snap-center shrink-0 w-[85vw] md:w-[70vw] h-[450px] md:h-[650px] relative group overflow-hidden rounded-3xl shadow-2xl border border-purple-800/50">
+          <img src="https://placehold.co/1200x800/3B0A6B/FFFFFF?text=Modern+ICT+Labs" alt="Students in ICT Lab" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-purpleDark/90 via-brand-purpleDark/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 md:p-12">
+            <h3 class="text-2xl md:text-4xl font-poppins font-bold text-brand-gold mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Modern ICT Labs</h3>
+            <p class="text-base md:text-xl text-gray-200 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">Fully equipped for software engineering & networking</p>
+          </div>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="snap-center shrink-0 w-[85vw] md:w-[70vw] h-[450px] md:h-[650px] relative group overflow-hidden rounded-3xl shadow-2xl border border-purple-800/50">
+          <img src="https://placehold.co/1200x800/1D4ED8/FFFFFF?text=Business+Seminars" alt="Business Students" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-purpleDark/90 via-brand-purpleDark/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 md:p-12">
+            <h3 class="text-2xl md:text-4xl font-poppins font-bold text-brand-gold mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Business Seminars</h3>
+            <p class="text-base md:text-xl text-gray-200 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">Interactive sessions preparing future corporate leaders</p>
+          </div>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="snap-center shrink-0 w-[85vw] md:w-[70vw] h-[450px] md:h-[650px] relative group overflow-hidden rounded-3xl shadow-2xl border border-purple-800/50">
+          <img src="https://placehold.co/1200x800/1E7A3C/FFFFFF?text=Clinical+Practicals" alt="Nursing Practicals" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-purpleDark/90 via-brand-purpleDark/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 md:p-12">
+            <h3 class="text-2xl md:text-4xl font-poppins font-bold text-brand-gold mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Clinical Practicals</h3>
+            <p class="text-base md:text-xl text-gray-200 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">Hands-on nursing training in simulated ward environments</p>
+          </div>
+        </div>
+
+        <!-- Image 4 -->
+        <div class="snap-center shrink-0 w-[85vw] md:w-[70vw] h-[450px] md:h-[650px] relative group overflow-hidden rounded-3xl shadow-2xl border border-purple-800/50">
+          <img src="https://placehold.co/1200x800/C81E3A/FFFFFF?text=Culinary+Arts" alt="Culinary Arts" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-purpleDark/90 via-brand-purpleDark/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 md:p-12">
+            <h3 class="text-2xl md:text-4xl font-poppins font-bold text-brand-gold mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Culinary Arts</h3>
+            <p class="text-base md:text-xl text-gray-200 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">Mastering flavors in our state-of-the-art training kitchens</p>
+          </div>
+        </div>
+
+        <!-- Image 5 -->
+        <div class="snap-center shrink-0 w-[85vw] md:w-[70vw] h-[450px] md:h-[650px] relative group overflow-hidden rounded-3xl shadow-2xl border border-purple-800/50">
+          <img src="https://placehold.co/1200x800/D4A017/FFFFFF?text=Graduation+Ceremony" alt="Graduation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-purpleDark/90 via-brand-purpleDark/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 md:p-12">
+            <h3 class="text-2xl md:text-4xl font-poppins font-bold text-brand-gold mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Annual Graduation</h3>
+            <p class="text-base md:text-xl text-gray-200 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">Celebrating the success of our world-class alumni</p>
+          </div>
+        </div>
+        
+      </div>
+
+      <!-- Swipe Hint -->
+      <div class="mt-6 flex items-center justify-center gap-2 text-brand-gold/60 text-sm font-medium animate-pulse reveal">
+        <i data-lucide="move-horizontal" class="w-5 h-5"></i>
+        <span>Swipe or scroll horizontally to explore</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
   <section class="py-20 md:py-28 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div class="text-center max-w-2xl mx-auto mb-16 reveal">
@@ -1164,6 +1258,39 @@
                 <p id="error-department" class="text-rose-500 text-[11px] font-semibold mt-1 hidden"></p>
               </div>
 
+              <!-- Course Selection (Populated dynamically and slides open) -->
+              <div id="course-container" class="hidden transition-all duration-300">
+                <label for="course" class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5">Select Specific Course</label>
+                <select id="course" class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-brand-purple/25 focus:border-brand-purple transition-all">
+                  <option value="" disabled selected>Select a Course</option>
+                </select>
+                <p id="error-course" class="text-rose-500 text-[11px] font-semibold mt-1 hidden"></p>
+              </div>
+
+              <!-- Prior Education Toggle -->
+              <div class="pt-2">
+                <button type="button" id="toggle-education-btn" class="flex items-center gap-2 text-xs font-bold text-brand-purple hover:text-brand-purpleDark transition-all outline-none">
+                  <i data-lucide="plus-circle" id="toggle-edu-icon" class="w-4 h-4 text-[#D4A017]"></i>
+                  <span>Add School Completion Years (Optional)</span>
+                </button>
+              </div>
+
+              <!-- Education Block (Hidden by default) -->
+              <div id="education-fields" class="hidden grid grid-cols-2 gap-4 p-4 rounded-2xl bg-brand-lavender/30 border border-brand-lavender/50 transition-all duration-300">
+                <div>
+                  <label for="form4Year" class="block text-[10px] font-bold text-gray-500 uppercase tracking-wider mb-1">Form 4 Finished (KCSE)</label>
+                  <select id="form4Year" class="w-full px-3 py-2 rounded-lg bg-white border border-gray-200 text-xs font-semibold text-gray-750 focus:outline-none focus:ring-2 focus:ring-brand-purple/25 focus:border-brand-purple transition-all">
+                    <option value="" selected>Choose Year</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="class8Year" class="block text-[10px] font-bold text-gray-500 uppercase tracking-wider mb-1">Class 8 Finished (KCPE)</label>
+                  <select id="class8Year" class="w-full px-3 py-2 rounded-lg bg-white border border-gray-200 text-xs font-semibold text-gray-750 focus:outline-none focus:ring-2 focus:ring-brand-purple/25 focus:border-brand-purple transition-all">
+                    <option value="" selected>Choose Year</option>
+                  </select>
+                </div>
+              </div>
+
               <div>
                 <label for="message" class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5">Your Message / Enquiry</label>
                 <textarea id="message" rows="3" placeholder="Tell us about the course or class timing you are interested in..." class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-brand-purple/25 focus:border-brand-purple transition-all resize-none"></textarea>
@@ -1194,17 +1321,69 @@
   <footer id="contact" class="bg-brand-purpleDark text-gray-300 pt-16 pb-10 border-t border-purple-950">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       
-      <!-- Newsletter Row -->
-      <div class="grid lg:grid-cols-12 gap-8 items-center border-b border-purple-900/40 pb-12 mb-12">
-        <div class="lg:col-span-5">
-          <h3 class="text-xl font-poppins font-extrabold text-white mb-2">Subscribe to our Newsletter</h3>
-          <p class="text-xs text-gray-400">Receive regular admissions updates, career workshops, and upcoming intakes.</p>
+      <!-- Location & Map Section (Replaces Newsletter) -->
+      <div class="grid lg:grid-cols-12 gap-8 items-stretch border-b border-purple-900/40 pb-12 mb-12">
+        <!-- Left Side: Location Details -->
+        <div class="lg:col-span-5 flex flex-col justify-between gap-6">
+          <div>
+            <span class="text-brand-gold text-xs font-bold uppercase tracking-widest">Find Us</span>
+            <h3 class="text-2xl font-poppins font-extrabold text-white mt-1 mb-4">Our Campus Location</h3>
+            <p class="text-xs text-gray-400 mb-6 leading-relaxed">Visit our modern campus in Nakuru for physical inquiries, campus tours, and face-to-face registration guidance.</p>
+            
+            <div class="space-y-4">
+              <!-- Physical Address -->
+              <div class="flex items-start gap-3.5">
+                <div class="w-8 h-8 rounded-lg bg-purple-950/80 border border-purple-800/40 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="map-pin" class="w-4 h-4 text-brand-gold"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-semibold text-white">Physical Address</h4>
+                  <p class="text-xs text-gray-400 mt-0.5">Giddo Plaza, 1st Floor, George Morara Rd, Nakuru, Kenya</p>
+                </div>
+              </div>
+
+              <!-- Opening Hours -->
+              <div class="flex items-start gap-3.5">
+                <div class="w-8 h-8 rounded-lg bg-purple-950/80 border border-purple-800/40 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="clock" class="w-4 h-4 text-brand-gold"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-semibold text-white">Office Hours</h4>
+                  <p class="text-xs text-gray-400 mt-0.5">Mon - Fri: 8:00 AM - 5:00 PM</p>
+                  <p class="text-xs text-gray-400">Sat: 9:00 AM - 1:00 PM</p>
+                </div>
+              </div>
+
+              <!-- Direct Admissions -->
+              <div class="flex items-start gap-3.5">
+                <div class="w-8 h-8 rounded-lg bg-purple-950/80 border border-purple-800/40 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="phone" class="w-4 h-4 text-brand-gold"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-semibold text-white">Direct Line</h4>
+                  <p class="text-xs text-gray-400 mt-0.5">+254 705 355 475</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-purple-900/20">
+            <a href="https://maps.google.com/?q=Giddo+Plaza+Nakuru" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-brand-gold hover:text-brand-goldLight transition-colors">
+              <span>Open in Google Maps</span>
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
         </div>
-        <div class="lg:col-span-7">
-          <form id="newsletterForm" class="flex flex-col sm:flex-row gap-3">
-            <input type="email" id="newsEmail" required placeholder="Enter your email address" class="w-full px-5 py-3.5 rounded-xl bg-purple-950/50 border border-purple-800 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold/50 focus:border-brand-gold text-white">
-            <button type="submit" class="bg-[#D4A017] hover:bg-[#B88A12] text-white font-bold px-6 py-3.5 rounded-xl transition-colors flex items-center justify-center gap-2 whitespace-nowrap"><i data-lucide="send" class="w-4 h-4"></i> Subscribe</button>
-          </form>
+
+        <!-- Right Side: Google Map Iframe -->
+        <div class="lg:col-span-7 h-[300px] lg:h-auto min-h-[300px] rounded-3xl overflow-hidden border border-purple-800/50 shadow-2xl relative">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7618999806497!2d36.06143497479707!3d-0.2907409997063547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1829e1eb13c328cb%3A0xe54e32ea3306db30!2sGiddo%20Plaza%2C%20George%20Morara%20Rd%2C%20Nakuru!5e0!3m2!1sen!2ske!4v1714490000000!5m2!1sen!2ske" 
+            class="absolute inset-0 w-full h-full border-0 grayscale opacity-75 hover:grayscale-0 hover:opacity-100 transition-all duration-500" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
       </div>
 
@@ -1415,32 +1594,32 @@
     // Tab Configurations for Departments
     const tabConfigs = {
       health: {
-        active: 'bg-[#1E7A3C] text-white border-[#1E7A3C] shadow-md',
-        inactive: 'border-[#1E7A3C] text-[#1E7A3C] bg-transparent hover:bg-[#1E7A3C]/5'
+        active: 'bg-gradient-to-br from-[#1E7A3C] to-[#125828] text-white border-[#1E7A3C] shadow-xl scale-[1.03] ring-4 ring-[#1E7A3C]/20',
+        inactive: 'bg-emerald-50 text-emerald-800 border-emerald-200/60 hover:bg-emerald-100 hover:border-emerald-300 hover:scale-[1.02]'
       },
       business: {
-        active: 'bg-[#1D4ED8] text-white border-[#1D4ED8] shadow-md',
-        inactive: 'border-[#1D4ED8] text-[#1D4ED8] bg-transparent hover:bg-[#1D4ED8]/5'
+        active: 'bg-gradient-to-br from-[#1D4ED8] to-[#11309F] text-white border-[#1D4ED8] shadow-xl scale-[1.03] ring-4 ring-[#1D4ED8]/20',
+        inactive: 'bg-blue-50 text-blue-800 border-blue-200/60 hover:bg-blue-100 hover:border-blue-300 hover:scale-[1.02]'
       },
       engineering: {
-        active: 'bg-[#E8720C] text-white border-[#E8720C] shadow-md',
-        inactive: 'border-[#E8720C] text-[#E8720C] bg-transparent hover:bg-[#E8720C]/5'
+        active: 'bg-gradient-to-br from-[#E8720C] to-[#A04D06] text-white border-[#E8720C] shadow-xl scale-[1.03] ring-4 ring-[#E8720C]/20',
+        inactive: 'bg-orange-50 text-orange-850 border-orange-200/60 hover:bg-orange-100 hover:border-orange-300 hover:scale-[1.02]'
       },
       hospitality: {
-        active: 'bg-[#C81E3A] text-white border-[#C81E3A] shadow-md',
-        inactive: 'border-[#C81E3A] text-[#C81E3A] bg-transparent hover:bg-[#C81E3A]/5'
+        active: 'bg-gradient-to-br from-[#C81E3A] to-[#8C1324] text-white border-[#C81E3A] shadow-xl scale-[1.03] ring-4 ring-[#C81E3A]/20',
+        inactive: 'bg-rose-50 text-rose-850 border-rose-200/60 hover:bg-rose-100 hover:border-rose-350 hover:scale-[1.02]'
       },
       cosmetology: {
-        active: 'bg-[#0E7C86] text-white border-[#0E7C86] shadow-md',
-        inactive: 'border-[#0E7C86] text-[#0E7C86] bg-transparent hover:bg-[#0E7C86]/5'
+        active: 'bg-gradient-to-br from-[#0E7C86] to-[#0A565E] text-white border-[#0E7C86] shadow-xl scale-[1.03] ring-4 ring-[#0E7C86]/20',
+        inactive: 'bg-teal-50 text-teal-800 border-teal-200/60 hover:bg-teal-100 hover:border-teal-300 hover:scale-[1.02]'
       },
       languages: {
-        active: 'bg-[#4338CA] text-white border-[#4338CA] shadow-md',
-        inactive: 'border-[#4338CA] text-[#4338CA] bg-transparent hover:bg-[#4338CA]/5'
+        active: 'bg-gradient-to-br from-[#4338CA] to-[#2B228F] text-white border-[#4338CA] shadow-xl scale-[1.03] ring-4 ring-[#4338CA]/20',
+        inactive: 'bg-indigo-50 text-indigo-850 border-indigo-200/60 hover:bg-indigo-100 hover:border-indigo-300 hover:scale-[1.02]'
       },
       fashion: {
-        active: 'bg-[#D6247A] text-white border-[#D6247A] shadow-md',
-        inactive: 'border-[#D6247A] text-[#D6247A] bg-transparent hover:bg-[#D6247A]/5'
+        active: 'bg-gradient-to-br from-[#D6247A] to-[#991252] text-white border-[#D6247A] shadow-xl scale-[1.03] ring-4 ring-[#D6247A]/20',
+        inactive: 'bg-pink-50 text-pink-850 border-pink-200/60 hover:bg-pink-100 hover:border-pink-300 hover:scale-[1.02]'
       }
     };
 
@@ -1479,12 +1658,16 @@
     }
 
     function enquireDept(deptName) {
-      // Pre-select in dropdown
       const deptDropdown = document.getElementById('department');
       if (deptDropdown) {
-        deptDropdown.value = deptName;
+        const optionExists = Array.from(deptDropdown.options).some(opt => opt.value === deptName);
+        if (optionExists) {
+          deptDropdown.value = deptName;
+        } else {
+          deptDropdown.value = "";
+        }
+        deptDropdown.dispatchEvent(new Event('change'));
       }
-      // Smooth scroll to registration form
       const regSection = document.getElementById('register');
       if (regSection) {
         regSection.scrollIntoView({ behavior: 'smooth' });
@@ -1583,6 +1766,165 @@
       }
     }
 
+    // Course data structure
+    const coursesByDept = {
+      "Health & Social Sciences": [
+        "Perioperative Theatre Technology",
+        "Certified Nurse Assistant (CNA)",
+        "Health Records & IT",
+        "Community Health Nursing",
+        "Nutrition and Dietetics",
+        "HIV Training Services (HTS)",
+        "Social Work & Community Development",
+        "Counselling Psychology",
+        "Criminology & Legal Studies",
+        "Science Laboratory Technology",
+        "Emergency Training"
+      ],
+      "Business": [
+        "Human Resource Management",
+        "Accountancy",
+        "Banking and Finance",
+        "Sales and Marketing",
+        "Secretarial Studies",
+        "Project Management",
+        "Certified Public Accountancy (CPA)",
+        "Public Administration",
+        "Store Keeping"
+      ],
+      "Engineering & ICT": [
+        "Electrical & Electronic Engineering",
+        "Automotive Engineering",
+        "Plumbing",
+        "General Agriculture",
+        "Information Communication Technology (ICT)",
+        "Computer Science",
+        "Software Engineering",
+        "Programming and AI",
+        "Advanced Computer Packages",
+        "Building Technology",
+        "Journalism & Mass Communication",
+        "Music & Deejaying"
+      ],
+      "Hospitality": [
+        "Food and Beverage",
+        "Catering and Accommodation",
+        "Hospitality Management",
+        "Tour and Travels",
+        "Flight Attendant"
+      ],
+      "Cosmetology": [
+        "Hair Dressing",
+        "Beauty Therapy",
+        "Skin Care",
+        "Shaving",
+        "Massage Training"
+      ],
+      "Foreign Languages": [
+        "French",
+        "German",
+        "Chinese",
+        "English",
+        "Kiswahili"
+      ],
+      "Fashion & Design": [
+        "Suits Tailoring",
+        "African Wear Custom Design",
+        "Kids Wear"
+      ]
+    };
+
+    // Populate Education Completion Years dynamically (from 2026 down to 1995)
+    const form4Select = document.getElementById('form4Year');
+    const class8Select = document.getElementById('class8Year');
+    if (form4Select && class8Select) {
+      const currentYear = new Date().getFullYear();
+      for (let y = currentYear; y >= 1995; y--) {
+        const opt1 = document.createElement('option');
+        opt1.value = y;
+        opt1.textContent = y;
+        form4Select.appendChild(opt1);
+
+        const opt2 = document.createElement('option');
+        opt2.value = y;
+        opt2.textContent = y;
+        class8Select.appendChild(opt2);
+      }
+      
+      const optBefore1 = document.createElement('option');
+      optBefore1.value = "Before 1995";
+      optBefore1.textContent = "Before 1995";
+      form4Select.appendChild(optBefore1);
+
+      const optBefore2 = document.createElement('option');
+      optBefore2.value = "Before 1995";
+      optBefore2.textContent = "Before 1995";
+      class8Select.appendChild(optBefore2);
+
+      const optNa1 = document.createElement('option');
+      optNa1.value = "N/A";
+      optNa1.textContent = "Not Applicable";
+      form4Select.appendChild(optNa1);
+
+      const optNa2 = document.createElement('option');
+      optNa2.value = "N/A";
+      optNa2.textContent = "Not Applicable";
+      class8Select.appendChild(optNa2);
+    }
+
+    // Toggle Education Fields
+    const toggleEduBtn = document.getElementById('toggle-education-btn');
+    const eduFields = document.getElementById('education-fields');
+    const toggleEduIcon = document.getElementById('toggle-edu-icon');
+    if (toggleEduBtn && eduFields) {
+      toggleEduBtn.addEventListener('click', () => {
+        const isHidden = eduFields.classList.contains('hidden');
+        if (isHidden) {
+          eduFields.classList.remove('hidden');
+          toggleEduBtn.querySelector('span').textContent = "Remove School Completion Years";
+          if (toggleEduIcon) {
+            toggleEduIcon.setAttribute('data-lucide', 'minus-circle');
+            lucide.createIcons({ nameAttr: 'data-lucide' });
+          }
+        } else {
+          eduFields.classList.add('hidden');
+          toggleEduBtn.querySelector('span').textContent = "Add School Completion Years (Optional)";
+          if (form4Select) form4Select.value = "";
+          if (class8Select) class8Select.value = "";
+          if (toggleEduIcon) {
+            toggleEduIcon.setAttribute('data-lucide', 'plus-circle');
+            lucide.createIcons({ nameAttr: 'data-lucide' });
+          }
+        }
+      });
+    }
+
+    // Handle Department Change for Courses
+    const deptSelect = document.getElementById('department');
+    const courseContainer = document.getElementById('course-container');
+    const courseSelect = document.getElementById('course');
+    
+    if (deptSelect && courseSelect && courseContainer) {
+      deptSelect.addEventListener('change', () => {
+        const selectedDept = deptSelect.value;
+        const courses = coursesByDept[selectedDept] || [];
+        
+        courseSelect.innerHTML = '<option value="" disabled selected>Select a Course</option>';
+        
+        if (courses.length > 0) {
+          courses.forEach(courseName => {
+            const opt = document.createElement('option');
+            opt.value = courseName;
+            opt.textContent = courseName;
+            courseSelect.appendChild(opt);
+          });
+          courseContainer.classList.remove('hidden');
+        } else {
+          courseContainer.classList.add('hidden');
+        }
+      });
+    }
+
     // Enquiry Form Submission Handler
     const enquiryForm = document.getElementById('enquiryForm');
     if (enquiryForm) {
@@ -1594,12 +1936,16 @@
         clearError('phone', 'error-phone');
         clearError('email', 'error-email');
         clearError('department', 'error-department');
+        clearError('course', 'error-course');
         clearError('message', 'error-message');
 
         const name = document.getElementById('fullName').value.trim();
         const phone = document.getElementById('phone').value.trim();
         const email = document.getElementById('email').value.trim();
         const dept = document.getElementById('department').value;
+        const course = document.getElementById('course').value;
+        const form4Year = document.getElementById('form4Year').value;
+        const class8Year = document.getElementById('class8Year').value;
         const message = document.getElementById('message').value.trim();
 
         let isValid = true;
@@ -1638,6 +1984,12 @@
           isValid = false;
         }
 
+        // Validate: Course choice
+        if (dept && !course) {
+          setError('course', 'error-course', 'Please select a specific course.');
+          isValid = false;
+        }
+
         // 5. Validate: Message
         if (!message) {
           setError('message', 'error-message', 'Please enter your message or enquiry.');
@@ -1649,8 +2001,20 @@
           return;
         }
 
-        // Formatting of the WhatsApp message exactly as requested
-        const text = "Hello Harvard Extention Training College! My name is " + name + ". I'm interested in the " + dept + " department. My phone: " + phone + ". Message: " + message;
+        // Formatting of the WhatsApp message
+        let text = "Hello Harvard Extention Training College! My name is " + name + ". I want to register for the " + course + " course in the " + dept + " department. My phone: " + phone;
+        
+        if (email) {
+          text += ". Email: " + email;
+        }
+        
+        if (form4Year || class8Year) {
+          text += ". Education Completion Years:";
+          if (form4Year) text += " [Form 4 Finished: " + form4Year + "]";
+          if (class8Year) text += " [Class 8 Finished: " + class8Year + "]";
+        }
+        
+        text += ". Message: " + message;
 
         const encodedText = encodeURIComponent(text);
         const whatsappUrl = `https://wa.me/254705355475?text=${encodedText}`;
@@ -1675,6 +2039,35 @@
           emailInput.value = '';
         }
       });
+    }
+
+    // Gallery Auto-Scroll
+    const galleryCarousel = document.getElementById('gallery-carousel');
+    if (galleryCarousel) {
+      let isHovered = false;
+      
+      // Pause on hover/interaction
+      galleryCarousel.addEventListener('mouseenter', () => isHovered = true);
+      galleryCarousel.addEventListener('mouseleave', () => isHovered = false);
+      galleryCarousel.addEventListener('touchstart', () => isHovered = true);
+      galleryCarousel.addEventListener('touchend', () => {
+        setTimeout(() => isHovered = false, 1500);
+      });
+
+      setInterval(() => {
+        if (!isHovered) {
+          const itemWidth = galleryCarousel.firstElementChild.offsetWidth + 24; // 24px is the gap-6
+          const maxScrollLeft = galleryCarousel.scrollWidth - galleryCarousel.clientWidth;
+          
+          if (galleryCarousel.scrollLeft >= maxScrollLeft - 10) {
+            // Loop back to start smoothly
+            galleryCarousel.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+            // Scroll to next item
+            galleryCarousel.scrollBy({ left: itemWidth, behavior: 'smooth' });
+          }
+        }
+      }, 3500);
     }
 
     // Initialize Lucide Icons
